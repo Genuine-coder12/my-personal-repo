@@ -38,7 +38,7 @@
 	"id":"68cd6b02d76f6c78a7efd378",
 	"lastModifiedBy":178107,
 	"lcName":"slack_test_dp",
-	"modifiedTime":1758357029168,
+	"modifiedTime":1758357172217,
 	"name":"slack_test_dp",
 	"nodes":[
 		{
@@ -49,7 +49,7 @@
 				"resourceName":"gmail_on_new_email_polling"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_d1QbQ-1",
 			"id":"n_U29WJ",
@@ -59,7 +59,7 @@
 				"fetchAllMails":false,
 				"pageSize":500,
 				"interval":5,
-				"batchSize":5
+				"batchSize":1
 			},
 			"skip":false,
 			"subTitle":"Gmail",
@@ -89,9 +89,9 @@
 					"ua:type":"mappedArray",
 					"items":"INBOX"
 				},
-				"query":"{{ n_U29WJ.outputs.batch }}"
+				"query":"{{ n_U29WJ.outputs }}"
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Gmail",
 			"title":"List Emails",
 			"type":"ACTION"
@@ -105,7 +105,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_d1QbQ-1",
 			"id":"n_tRJzL",
@@ -119,7 +119,7 @@
 					"items":"{{ n_6amhH.outputs.messages }}"
 				}
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Gmail",
 			"title":"Get message",
 			"type":"ACTION"
@@ -132,7 +132,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_d1QbQ-1",
 			"id":"n_xF42V",
@@ -369,6 +369,7 @@
 			"inputs":{
 				"createList":{
 					"ua:type":"mappedArray",
+					"source":"{{ n_U29WJ.outputs }}",
 					"items":{
 						"body":"{{ n_tRJzL.outputs.snippet }}",
 						"Date_and_Time":"{{ n_tRJzL.outputs.payload.parts[0].headers }}",
@@ -459,5 +460,5 @@
 	"tags":[
 		
 	],
-	"version":36
+	"version":37
 }
