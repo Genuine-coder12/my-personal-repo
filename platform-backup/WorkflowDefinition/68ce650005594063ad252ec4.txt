@@ -11,12 +11,26 @@
 			"skip":false,
 			"toNodeId":"n_lLoVz",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_lLoVz",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_DtoHr",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_DtoHr",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Xl2Ez",
+			"type":"next"
 		}
 	],
 	"id":"68ce650005594063ad252ec4",
 	"lastModifiedBy":76193,
 	"lcName":"virtusa | slack update [dnd]",
-	"modifiedTime":1758356948748,
+	"modifiedTime":1758357568986,
 	"name":"Virtusa | Slack Update [DND]",
 	"nodes":[
 		{
@@ -73,6 +87,158 @@
 			"subTitle":"Google Sheets",
 			"title":"Get rows",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"utility_by_unifyapps_filter_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_GiVOu-1",
+			"id":"n_DtoHr",
+			"index":3,
+			"inputs":{
+				"filter":{
+					"filters":[
+						{
+							"property":"{{ n_lLoVz.outputs.rows[0].Category__3 }}",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"UI"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"listSource":"{{ n_lLoVz.outputs.rows }}"
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Filter List of Data",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				},
+				"visibleOptionalFields":[
+					"root.parameters.rows.items.Cust_ETA__Delivery_Date__1",
+					"root.parameters.rows.items.Item__2",
+					"root.parameters.rows.items.Item_Priority__4",
+					"root.parameters.rows.items.Current_Status__5",
+					"root.parameters.rows.items.Dev_Owner__6",
+					"root.parameters.rows.items.At_Risk___12",
+					"root.parameters.rows.items.Comments__if_any___14",
+					"root.parameters.rows.items.Monday_Ticket_with_Details__Optional___16",
+					"root.parameters.rows.source",
+					"root.parameters.rows.ua:type",
+					"root.parameters.rows.items.Cust_ETA__Delivery_Date__1",
+					"root.parameters.rows.items.Item__2",
+					"root.parameters.rows.items.Item_Priority__4",
+					"root.parameters.rows.items.Current_Status__5",
+					"root.parameters.rows.items.Dev_Owner__6",
+					"root.parameters.rows.items.At_Risk___12",
+					"root.parameters.rows.items.Comments__if_any___14",
+					"root.parameters.rows.items.Monday_Ticket_with_Details__Optional___16"
+				]
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_GiVOu-1",
+			"id":"n_Xl2Ez",
+			"index":4,
+			"inputs":{
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"rows":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"Cust_ETA__Delivery_Date__1":{
+										"type":"string",
+										"title":"Cust_ETA__Delivery_Date__1"
+									},
+									"Item__2":{
+										"type":"string",
+										"title":"Item__2"
+									},
+									"Item_Priority__4":{
+										"type":"string",
+										"title":"Item_Priority__4"
+									},
+									"Current_Status__5":{
+										"type":"string",
+										"title":"Current_Status__5"
+									},
+									"Dev_Owner__6":{
+										"type":"string",
+										"title":"Dev_Owner__6"
+									},
+									"At_Risk___12":{
+										"type":"string",
+										"title":"At_Risk___12"
+									},
+									"Comments__if_any___14":{
+										"type":"string",
+										"title":"Comments__if_any___14"
+									},
+									"Monday_Ticket_with_Details__Optional___16":{
+										"type":"string",
+										"title":"Monday_Ticket_with_Details__Optional___16"
+									},
+									"App":{
+										"type":"string",
+										"title":"App"
+									}
+								},
+								"additionalProperties":false,
+								"required":[
+									"App"
+								]
+							},
+							"title":"rows"
+						}
+					}
+				},
+				"compile_static":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"rows":{
+						"ua:type":"mappedArray",
+						"items":{
+							"App":"{{ n_DtoHr.outputs.filteredList[0].Track__0 }}",
+							"Cust_ETA__Delivery_Date__1":"{{ n_DtoHr.outputs.filteredList[0].Cust_ETA__Delivery_Date__1 }}",
+							"Item__2":"{{ n_DtoHr.outputs.filteredList[0].Item__2 }}",
+							"Item_Priority__4":"{{ n_DtoHr.outputs.filteredList[0].Item_Priority__4 }}",
+							"Current_Status__5":"{{ n_DtoHr.outputs.filteredList[0].Current_Status__5 }}",
+							"Dev_Owner__6":"{{ n_DtoHr.outputs.filteredList[0].Dev_Owner__6 }}",
+							"At_Risk___12":"{{ n_DtoHr.outputs.filteredList[0].At_Risk___12 }}",
+							"Comments__if_any___14":"{{ n_DtoHr.outputs.filteredList[0].Comments__if_any___14 }}",
+							"Monday_Ticket_with_Details__Optional___16":"{{ n_DtoHr.outputs.filteredList[0].Monday_Ticket_with_Details__Optional___16 }}"
+						},
+						"source":"{{ n_DtoHr.outputs.filteredList }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
 		}
 	],
 	"ownerUserId":76193,
@@ -92,5 +258,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
