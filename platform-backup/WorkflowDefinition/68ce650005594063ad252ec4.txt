@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1758356736106,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_GiVOu",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_NL8DV",
+			"type":"next"
+		}
+	],
+	"id":"68ce650005594063ad252ec4",
+	"lastModifiedBy":76193,
+	"lcName":"virtusa | slack update [dnd]",
+	"modifiedTime":1758356736106,
+	"name":"Virtusa | Slack Update [DND]",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_GiVOu-1",
+			"id":"_GiVOu",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_GiVOu-1",
+			"id":"_NL8DV",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":76193,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
