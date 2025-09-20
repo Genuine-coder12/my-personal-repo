@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1758358041450,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_VAON3",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_cx2MV",
+			"type":"next"
+		}
+	],
+	"id":"68ce6a190591d245fb607193",
+	"lastModifiedBy":179213,
+	"lcName":"test automation",
+	"modifiedTime":1758358041450,
+	"name":"test automation",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_VAON3-1",
+			"id":"_VAON3",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_VAON3-1",
+			"id":"_cx2MV",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":179213,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
