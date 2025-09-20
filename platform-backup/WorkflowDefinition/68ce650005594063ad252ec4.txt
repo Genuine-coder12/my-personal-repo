@@ -30,7 +30,7 @@
 	"id":"68ce650005594063ad252ec4",
 	"lastModifiedBy":76193,
 	"lcName":"virtusa | slack update [dnd]",
-	"modifiedTime":1758357568986,
+	"modifiedTime":1758357578184,
 	"name":"Virtusa | Slack Update [DND]",
 	"nodes":[
 		{
@@ -215,6 +215,7 @@
 						}
 					}
 				},
+				"code":"return true",
 				"compile_static":false,
 				"captureStdOutput":false,
 				"parameters":{
@@ -258,5 +259,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
