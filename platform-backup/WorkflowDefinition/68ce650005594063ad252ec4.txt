@@ -30,7 +30,7 @@
 	"id":"68ce650005594063ad252ec4",
 	"lastModifiedBy":76193,
 	"lcName":"virtusa | slack update [dnd]",
-	"modifiedTime":1758357578184,
+	"modifiedTime":1758357626819,
 	"name":"Virtusa | Slack Update [DND]",
 	"nodes":[
 		{
@@ -77,7 +77,7 @@
 			"index":2,
 			"inputs":{
 				"sheetName":"Tracker",
-				"valueRenderOption":"FORMATTED_VALUE",
+				"valueRenderOption":"UNFORMATTED_VALUE",
 				"objectSourceResourceName":"gsheets_fetch_columns",
 				"range":"2:200",
 				"spreadsheetId":"1ipc0Vk8lQWP-8G8gQ1VaZ6hpQRNqlixXwB0EFcah-Vs__Virtusa | Tasks Tracker",
@@ -259,5 +259,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
