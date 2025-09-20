@@ -1,51 +1,84 @@
 {
 	"appsUsed":[
-		
+		"gsheets"
 	],
 	"createdTime":1758356736106,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_GiVOu",
+			"fromNodeId":"n_oAuRR",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_NL8DV",
+			"toNodeId":"n_lLoVz",
 			"type":"next"
 		}
 	],
 	"id":"68ce650005594063ad252ec4",
 	"lastModifiedBy":76193,
 	"lcName":"virtusa | slack update [dnd]",
-	"modifiedTime":1758356736106,
+	"modifiedTime":1758356948748,
 	"name":"Virtusa | Slack Update [DND]",
 	"nodes":[
 		{
+			"context":{
+				"appName":"schedule",
+				"resourceVersion":807,
+				"resourceName":"schedule_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_GiVOu-1",
-			"id":"_GiVOu",
-			"index":0,
+			"id":"n_oAuRR",
+			"index":1,
+			"inputs":{
+				"cron":"INTERVAL",
+				"sequential":false,
+				"timezone":"Asia/Calcutta",
+				"interval":1,
+				"frequency":"DAYS",
+				"triggerAt":"10:00:00"
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Schedule",
+			"title":"New recurring event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"SCHEDULED"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"gsheets",
+				"resourceVersion":6024,
+				"connectionId":"68ce657bb270492a09944d6c",
+				"resourceName":"gsheets_get_rows_batch",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_GiVOu-1",
-			"id":"_NL8DV",
-			"index":0,
+			"id":"n_lLoVz",
+			"index":2,
+			"inputs":{
+				"sheetName":"Tracker",
+				"valueRenderOption":"FORMATTED_VALUE",
+				"objectSourceResourceName":"gsheets_fetch_columns",
+				"range":"2:200",
+				"spreadsheetId":"1ipc0Vk8lQWP-8G8gQ1VaZ6hpQRNqlixXwB0EFcah-Vs__Virtusa | Tasks Tracker",
+				"googleDrive":"0AO8lpMZP6rz5Uk9PVA"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Google Sheets",
+			"title":"Get rows",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":76193,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +92,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
